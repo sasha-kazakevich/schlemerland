@@ -1,0 +1,17 @@
+{
+  "name": "frontend-devil",
+  "version": "1.0.0",
+  "homepage": "",
+  "authors": [
+    "sasha kazakevich"
+  ],
+  "description": "Boilerplate for jade+js+styl apps",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "normalize.styl": "*",
+    "jquery": "2.*"
+  }
+}
