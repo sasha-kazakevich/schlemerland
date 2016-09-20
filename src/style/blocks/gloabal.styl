@@ -1,0 +1,42 @@
+html,
+body
+  font-family "GothamProLight"
+  font-size 16px
+  height 100%
+
+*
+  box-sizing border-box
+
+.main-wrapper
+  height 100%
+  position relative
+
+.content
+  margin-right 300px
+  position relative
+  height 100%
+  +below(730px)
+    margin-right 0
+
+.main-navigation
+  width 300px
+  float right
+
+  .button-burg
+    width 50px
+    height 50px
+    right 20px
+    top 20px
+    cursor pointer
+    background url('../img/menu/burger.svg') no-repeat center center
+    position absolute
+    z-index 120
+    display none
+    cursor pointer
+
+  +below(730px)
+    width 100px
+    float none
+
+    .button-burg
+      display block
