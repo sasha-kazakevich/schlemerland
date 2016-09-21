@@ -19,4 +19,9 @@ window.onload = function(){
       navigation: false
     }
   );
+
+  function main(ctx, next) {
+    console.log('main Page');
+    next();
+  }
 };
