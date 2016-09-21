@@ -1,0 +1,66 @@
+.contacts-page
+  display flex
+  height 100%
+  font-size 18px
+
+.contacts-info
+  width 50%
+  padding 130px 60px
+
+
+  &__icons
+    margin-top 25px
+
+  &__icon
+    font-size 18px
+    margin 0
+    margin-bottom 30px
+
+    &:before
+      content ''
+      display inline-block
+      position relative
+      top 15px
+      width 50px
+      height 50px
+      margin-right 50px
+
+  &__icon--email
+    &:before
+      background url('../img/contacts/mail.png') no-repeat center center
+
+  &__icon--number
+    &:before
+      background url('../img/contacts/mob.png') no-repeat center center
+
+.contacts-form
+  width 50%
+  background-color #e8e8e8
+  text-align center
+
+  &__name
+    margin 35px
+    font-size 24px
+    font-weight normal
+
+
+  // &__form
+  //   margin-top 50px
+
+  &__input,
+  &__button
+    width 90%
+    padding 17px 10px 21px 10px
+    margin-bottom 30px
+    border none
+    outline none
+    border-radius 30px
+
+  &__input--textarea
+    resize none
+
+  &__button
+    width 60%
+    font-family "GothamProMedium"
+    background-color #cc3333
+    color #fff
