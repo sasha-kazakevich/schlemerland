@@ -9,9 +9,9 @@ window.onload = function(){
       }
 
       buttonBurg.addEventListener('click',toggleMenu,false);
+};
 
-
-
+function main(ctx, next) {
   $('#pagepiling').pagepiling(
     {
       loopTop: true,
@@ -19,9 +19,21 @@ window.onload = function(){
       navigation: false
     }
   );
+  console.log('main Page');
+}
 
-  function main(ctx, next) {
-    console.log('main Page');
-    next();
-  }
-};
+function menu(ctx, next) {
+  console.log("Menu Page");
+}
+
+function about(ctx, next) {
+  console.log("about Page");
+}
+
+function clients(ctx, next) {
+  console.log("client Page");
+}
+
+function contacts(ctx, next) {
+  console.log("contact Page");
+}

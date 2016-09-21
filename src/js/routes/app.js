@@ -1,7 +1,7 @@
-page('/', route.main);
-page('/menu', route.menu);
-page('/about', route.about);
-page('/clients', route.clients);
-page('/contacts', route.contacts);
+page('/', route.main,main);
+page('/menu', route.menu,menu);
+page('/about', route.about,about);
+page('/clients', route.clients,clients);
+page('/contacts', route.contacts,contacts);
 
 page();
