@@ -2,10 +2,32 @@
 html(lang="en")
   head
     meta(charset="UTF-8")
-    title Document
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="format-detection", content="telephone=no")
+    title Schlemmerland
     link(rel="stylesheet" href="css/main.css")
-    script(src="js/main.js")
     
   body
-    h1 Hello World
-  
+    div.main-wrapper
+      div.main-navigation
+        div#button-burg.button-burg
+        nav#main-nav.main-nav
+          div.main-nav__wrapper
+            header.main-nav__header
+            ul.main-nav__list
+              li.main-nav__item.main-nav__item--menu
+                a(href="/menu") Меню
+              li.main-nav__item.main-nav__item--about
+                a(href="/about") О нас
+              li.main-nav__item.main-nav__item--client
+                a(href="/clients") Клиенту
+              li.main-nav__item.main-nav__item--contact
+                a(href="/contacts") Контакты
+            footer.main-nav__footer
+              a.main-nav__social.main-nav__social--fb(href="http://facebook.com") Мы в фейсбуке
+      div#content.content
+                  
+            
+    script(src="js/main.js")
+          
