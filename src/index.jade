@@ -27,8 +27,20 @@ html(lang="en")
             footer.main-nav__footer
               a.main-nav__social.main-nav__social--fb(href="http://facebook.com") Мы в фейсбуке
       div.content
-        div.contacts
-          h1 Hello Contacts!
+        div.contacts-page
+          div.contacts-info
+            p.contacts-info__infotext Если у вас есть какие-либо вопросы, то позвоните нам или оставить нам сообщение.
+            div.contacts-info__icons
+              p.contacts-info__icon.contacts-info__icon--email sales@schlemmerland.ru
+              p.contacts-info__icon.contacts-info__icon--number +7 (915) 117-55-74
+          div.contacts-form
+            h1.contacts-form__name Форма обратной связи
+            form.contacts-form__form#contacts-form(method="post" action="")
+                input.contacts-form__input(form="contacts-form" id="name" name="name" title="Ваше имя" type="text" placeholder="Вaше Имя"  pattern="[a-zA-Zа-яА-Я ]+")
+                input.contacts-form__input(form="contacts-form" id="email" name="email" title="email" type="email" placeholder="Введите email" pattern="^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$")
+                input.contacts-form__input(form="contacts-form" id="number" name="number" type="text" placeholder="Введите телефон" pattern="[0-9]+")
+                textarea.contacts-form__input.contacts-form__input--textarea(form="contacts-form" id="message" name="message" rows="5" title="сообщение" type="text" placeholder="Ваше сообщение")
+                button.contacts-form__button(type="submit") Отправить
                   
             
     script(src="js/main.js")

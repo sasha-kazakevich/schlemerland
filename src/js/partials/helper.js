@@ -12,11 +12,11 @@ window.onload = function(){
 
 
 
-  $('#pagepiling').pagepiling(
-    {
-      loopTop: true,
-      loopBottom: true,
-      navigation: false
-    }
-  );
+  // $('#pagepiling').pagepiling(
+  //   {
+  //     loopTop: true,
+  //     loopBottom: true,
+  //     navigation: false
+  //   }
+  // );
 };
