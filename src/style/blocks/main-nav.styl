@@ -1,11 +1,19 @@
 .main-nav
-  width 300px
+  width 50px
   position fixed
   height 100%
   right 0
   z-index 100
   background-color #fff
+  transition width .4s ease
+  // border 1px solid red
   // overflow-y auto
+  &:hover
+    width 300px
+
+    .main-nav__item
+      &:before
+        left 30px
 
   &__wrapper
     width 100%
@@ -15,12 +23,13 @@
     height 100%
 
   &__header
-    padding 0px 0
+    padding 0
 
   &__list
     padding 0
     margin 0
     list-style none
+    overflow hidden
 
   &__item
     font-size 18px
@@ -44,7 +53,8 @@
       width 35px
       height 35px
       top 30px
-      left 50px
+      left 6px
+      transition left .4s ease
       // background url('../img/menu/menu-sprite.svg') no-repeat
 
     a
@@ -52,7 +62,8 @@
       z-index 1
       display block
       width 100%
-      padding 37px 0 37px 125px
+      padding 40px
+      padding-left 120px
       color #000
       transition color .1s ease
       text-decoration none
@@ -89,8 +100,8 @@
   &__social
     display block
     width 30px
-    float right
-    margin-right 40px
+    // float right
+    margin 0 auto
     font 0/0 serif
 
     &:before
@@ -107,17 +118,21 @@
 .main-nav
   +below(730px)
     display none
-    width 250px
+    width 40px
+
+    &:hover
+      width 250px
 
     &__header
       display none
 
     &__item
       margin-bottom 0px
+      &:before
+        left 0
 
   &__social
     +below(730px)
-      float none
       margin 0 auto
 
 .open
