@@ -10,17 +10,27 @@ body
 .main-wrapper
   height 100%
   position relative
+  // overflow-y scroll
 
 .content
-  margin-right 300px
+  margin-right 50px
   position relative
   height 100%
+  overflow auto
+  transition margin-right .4s ease
+
   +below(730px)
     margin-right 0
 
 .main-navigation
-  width 300px
+  width 50px
   float right
+  transition width .4s ease
+  &:hover
+    width 300px
+
+    + .content
+        margin-right 300px
 
   .button-burg
     width 50px
@@ -40,3 +50,10 @@ body
 
     .button-burg
       display block
+
+.main-navigation
+  +below(730px)
+      &:hover
+        width 0
+        + .content
+            margin-right 0
