@@ -10,11 +10,12 @@ html(lang="en")
     
   body
     div.main-wrapper
-      div.main-navigation
-        div#button-burg.button-burg
+      div#main-navigation.main-navigation.main-navigation--closed
+        div#button-burg.main-navigation__toggle
         nav#main-nav.main-nav
           div.main-nav__wrapper
             header.main-nav__header
+              a(href="/") Перейти&nbsp;на&nbsp;главную
             ul.main-nav__list
               li.main-nav__item.main-nav__item--menu
                 a(href="/menu") Меню
@@ -25,7 +26,7 @@ html(lang="en")
               li.main-nav__item.main-nav__item--contact
                 a(href="/contacts") Контакты
             footer.main-nav__footer
-              a.main-nav__social.main-nav__social--fb(href="http://facebook.com") Мы в фейсбуке
+              a.main-nav__social.main-nav__social--fb(href="http://facebook.com") Мы&nbsp;в&nbsp;Facebook
       div#content.content
                   
             
