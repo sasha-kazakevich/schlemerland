@@ -1,5 +1,5 @@
 .main-nav
-  width 50px
+  width 100px
   position fixed
   height 100%
   right 0
@@ -11,9 +11,14 @@
   &:hover
     width 300px
 
-    .main-nav__item
+    .main-nav__header
+      a
+        opacity 1
+
+    .main-nav__social
       &:before
-        left 30px
+        opacity 1
+
 
   &__wrapper
     width 100%
@@ -24,6 +29,14 @@
 
   &__header
     padding 0
+    text-align center
+    overflow hidden
+    a
+      color #cc3333
+      font-size 14px
+      text-decoration none
+      opacity 0
+      transition opacity .3s ease
 
   &__list
     padding 0
@@ -53,7 +66,7 @@
       width 35px
       height 35px
       top 30px
-      left 6px
+      left 30px
       transition left .4s ease
       // background url('../img/menu/menu-sprite.svg') no-repeat
 
@@ -109,6 +122,8 @@
       display inline-block
       width 30px
       height 30px
+      opacity 0
+      transition opacity .3s ease
 
   &__social--fb
     &:before
@@ -117,23 +132,22 @@
 
 .main-nav
   +below(730px)
-    display none
-    width 40px
+    // display none
+    width 0px
 
     &:hover
       width 250px
 
     &__header
-      display none
+      a
+        opacity 1
 
     &__item
       margin-bottom 0px
+
+    &__social
       &:before
-        left 0
-
-  &__social
-    +below(730px)
-      margin 0 auto
-
-.open
-  display block
+        opacity 1
+  // &__social
+  //   +below(730px)
+  //     margin 0 auto

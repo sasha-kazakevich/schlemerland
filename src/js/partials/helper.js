@@ -1,11 +1,14 @@
 //Так приятней :)
 window.onload = function(){
-  var mainMenu = document.getElementById('main-nav'),
+  var mainNavigation = document.getElementById('main-navigation'),
+      mainMenu = document.getElementById('main-nav'),
       buttonBurg = document.getElementById('button-burg');
 
       function toggleMenu(){
         console.log("Ky!");
-        mainMenu.classList.toggle('open');
+        mainNavigation.classList.toggle('main-navigation--closed');
+        mainNavigation.classList.toggle('main-navigation--opened');
+
       }
 
       buttonBurg.addEventListener('click',toggleMenu,false);
