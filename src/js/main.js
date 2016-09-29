@@ -5,7 +5,11 @@
 
 //= ../../bower_components/pagePiling.js/jquery.pagepiling.min.js
 
+//= ./nicescroll/jquery.nicescroll.min.js
+
 //= ./routes/page.js
+
+
 
 /*
     Custom

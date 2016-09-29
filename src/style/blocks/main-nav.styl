@@ -48,7 +48,7 @@
     font-size 18px
     position relative
     transition all .2s ease
-    margin-bottom 32px
+    // margin-bottom 32px
 
     &:hover
       background-color #cc3333
@@ -80,6 +80,13 @@
       color #000
       transition color .1s ease
       text-decoration none
+
+  &__item--home
+    &:hover
+      &:before
+        background url('../img/menu/home-w.svg') no-repeat center center
+    &:before
+      background url('../img/menu/home-r.svg') no-repeat center center
 
   &__item--menu
     &:hover
@@ -122,8 +129,6 @@
       display inline-block
       width 30px
       height 30px
-      opacity 0
-      transition opacity .3s ease
 
   &__social--fb
     &:before
@@ -138,16 +143,9 @@
     &:hover
       width 250px
 
-    &__header
-      a
-        opacity 1
-
     &__item
       margin-bottom 0px
 
-    &__social
-      &:before
-        opacity 1
   // &__social
   //   +below(730px)
   //     margin 0 auto
