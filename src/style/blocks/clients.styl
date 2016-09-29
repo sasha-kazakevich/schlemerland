@@ -1,0 +1,80 @@
+.clients
+  background-color #e8e8e8
+  padding 50px
+
+.clients-receive
+  &__title
+    font-size 30px
+    font-weight 200
+    margin 0
+    margin-bottom 50px
+.main-wrapper
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  .wrapper
+    width 100%
+    display flex
+    justify-content space-between
+    align-items flex-start
+    margin-bottom 50px
+    min-height 160px
+    &__image
+      width 14%
+      display inline
+
+    &__info
+      width 80%
+
+    &__name
+      font-size 18px
+      padding 0
+      margin 0
+
+    &__text
+      font-size 18px
+
+  .decor
+    width 47%
+    min-height 220px
+
+  .img-decor
+    width 30%
+
+  .info-dec
+    width 55%
+
+.client-button
+  width 320px
+  border-radius 30px
+  background-color #fff
+  text-align center
+  transition all .3s ease
+
+  &__menu
+    display inline-block
+    // position relative
+    width 100%
+    padding 15px
+    text-decoration none
+    color #cc3333
+    font-size 18px
+    font-weight bold
+
+    &:before
+      content ''
+      display inline-block
+      vertical-align middle
+      width 30px
+      height 30px
+      margin-right 20px
+      background url('../img/clients/btn.png') no-repeat center center
+
+  &:hover
+    background-color #cc3333
+
+    .client-button__menu
+      color #fff
+
+      &:before
+        background url('../img/clients/btn-h.png') no-repeat center center

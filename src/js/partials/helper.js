@@ -1,5 +1,10 @@
-//Так приятней :)
+$(document).ready(function() {
+  $("html").niceScroll();
+});
+
+
 window.onload = function(){
+
   var mainNavigation = document.getElementById('main-navigation'),
       mainMenu = document.getElementById('main-nav'),
       buttonBurg = document.getElementById('button-burg');
@@ -35,8 +40,17 @@ function about(ctx, next) {
 
 function clients(ctx, next) {
   console.log("client Page");
+
 }
 
 function contacts(ctx, next) {
   console.log("contact Page");
 }
+
+$(document).ready(function() {
+    $(".content").niceScroll({
+      cursorcolor: "#cc3333",
+      cursorborder: "1px solid #cc3333",
+      cursorwidth: "4px",
+    });
+});
