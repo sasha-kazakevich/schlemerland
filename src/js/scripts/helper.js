@@ -1,12 +1,6 @@
-$(document).ready(function() {
-  $("html").niceScroll();
-});
-
-
 window.onload = function(){
 
   var mainNavigation = document.getElementById('main-navigation'),
-      mainMenu = document.getElementById('main-nav'),
       buttonBurg = document.getElementById('button-burg');
 
       function toggleMenu(){
@@ -19,6 +13,11 @@ window.onload = function(){
       buttonBurg.addEventListener('click',toggleMenu,false);
 };
 
+function animation(){
+  $('.animated').removeClass('slideInRight');
+  $('.animated').addClass('slideOutLeft');
+}
+
 function main(ctx, next) {
   $('#pagepiling').pagepiling(
     {
@@ -27,7 +26,6 @@ function main(ctx, next) {
       navigation: false
     }
   );
-  console.log('main Page');
 }
 
 function menu(ctx, next) {
@@ -36,21 +34,45 @@ function menu(ctx, next) {
 
 function about(ctx, next) {
   console.log("about Page");
+
+  $('#pagepiling').pagepiling(
+    {
+      loopTop: true,
+      loopBottom: true,
+      navigation: false
+    }
+  );
+  $('#feedback-button').click(function(){
+    $('#feedback-form').css('right','0');
+  })
+
+  $('#questions-button').click(function(){
+    $('#questions-form').css('right','0');
+  })
+
+  $('#feedback-title').click(function(){
+    $('#feedback-form').css('right','-380px');
+  })
+
+  $('#questions-title').click(function(){
+    $('#questions-form').css('right','-380px');
+  })
+
+  $('#da-slider').cslider({
+    autoplay: true,
+    bgincrement: 450
+  });
+}
+function exitPage(cts, next) {
+  animation();
+  setTimeout(next,400);
 }
 
 function clients(ctx, next) {
   console.log("client Page");
-
+  // $('#clients').customScroll();
 }
 
 function contacts(ctx, next) {
   console.log("contact Page");
 }
-
-$(document).ready(function() {
-    $(".content").niceScroll({
-      cursorcolor: "#cc3333",
-      cursorborder: "1px solid #cc3333",
-      cursorwidth: "4px",
-    });
-});

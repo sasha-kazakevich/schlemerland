@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -8,28 +8,13 @@ html(lang="en")
     title Schlemmerland
     link(rel="stylesheet" href="css/main.css")
     
-  body
+  body.body
     div.main-wrapper
-      div#main-navigation.main-navigation.main-navigation--closed
-        div#button-burg.main-navigation__toggle
-        nav#main-nav.main-nav
-          div.main-nav__wrapper
-            header.main-nav__header
-            ul.main-nav__list
-              li.main-nav__item.main-nav__item--home
-                a(href="/") Главная
-              li.main-nav__item.main-nav__item--menu
-                a(href="/menu") Меню
-              li.main-nav__item.main-nav__item--about
-                a(href="/about") О&nbsp;нас
-              li.main-nav__item.main-nav__item--client
-                a(href="/clients") Клиенту
-              li.main-nav__item.main-nav__item--contact
-                a(href="/contacts") Контакты
-            footer.main-nav__footer
-              a.main-nav__social.main-nav__social--fb(href="http://facebook.com") Мы&nbsp;в&nbsp;Facebook
-      div#content.content
-                  
-            
+      section#main-navigation.main-navigation.main-navigation--closed
+        //main-menu
+        include ./template/blocks/main-nav.jade
+        
+      section#content.content
+      
     script(src="js/main.js")
           

@@ -1,2 +1,30 @@
-section.about
-  p Страница в разработке!
+mixin slider(slider)
+  .da-slide
+    .da-img
+      img(src= slider.img alt="img")
+    p= slider.text
+    h2= slider.name
+
+mixin form(arg,id)
+  form.about-form(id= id + '-form')
+    h1.form-title(id= id + '-title').about-form__title= arg
+    input.about-form__input(form="about-form" id="name" name="name" title="Ваше имя" type="text" placeholder="Вaше имя"  pattern="[a-zA-Zа-яА-Я ]+")
+    input.about-form__input(form="about-form" id="email" name="email" title="email" type="email" placeholder="Ваш email" pattern="^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$")
+    textarea.about-form__input.about-form__input--textarea(form="about-form" id="message" name="message" rows="10" title="сообщение" type="text" placeholder="Текст...")
+    button.about-form__button(type="submit") Отправить
+  
+  
+mixin accord(acc,i)
+  div
+    input(type="checkbox" name="accordion-1" id= "ac-" + i)
+    label(for= "ac-" + i)= acc.title
+    article(class="ac-medium")
+      p= acc.text
+
+section.about-page.animated.slideInRight
+  #pagepiling
+    include ./blocks/about-info.jade
+    
+    include ./blocks/about-feedback.jade
+    
+    //- include ./blocks/about-questions.jade

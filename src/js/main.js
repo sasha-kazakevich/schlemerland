@@ -1,19 +1,20 @@
 /*
  Third party
  */
+//= ./slider/modernizr.custom.28468.js
+
 //= ../../bower_components/jquery/dist/jquery.min.js
 
 //= ../../bower_components/pagePiling.js/jquery.pagepiling.min.js
 
-//= ./nicescroll/jquery.nicescroll.min.js
-
 //= ./routes/page.js
 
+//= ./slider/jquery.cslider.js
 
 
 /*
     Custom
  */
-//= ./partials/helper.js
+//= ./scripts/helper.js
 //= ./routes/index.js
 //= ./routes/app.js
