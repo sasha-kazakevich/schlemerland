@@ -1,0 +1,16 @@
+mixin quality(quality)
+  li.main-information__quality.clearfix
+    div.main-information__images(class= "main-information__images--" + quality.mod)
+    p.main-information__text= quality.text
+    
+- var qualitys = [{'mod':'freshness','text':'Свежесть'},{'mod':'qual','text':'Качество'},{'mod':'price','text':'Цена'}]
+
+section.main-information.section
+  div.main-information__wrapper
+    ul.main-information__qualities
+      each quality in qualitys
+        +quality(quality)
+    button.main-information__learn-more
+      span.visible Получить информацию
+      a.hidden(href="/clients") Получить информацию
+    div.animation-scroll

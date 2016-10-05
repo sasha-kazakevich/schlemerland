@@ -1,0 +1,53 @@
+.about-form
+  position absolute
+  top 0
+  right -380px
+  width 380px
+  height 100%
+  padding 45px 0
+  background #cc3333
+  text-align center
+  transition right .3s ease-in-out
+
+  z-index 100
+
+  &__title
+    margin 0
+    font-size 30px
+    font-weight 300
+    margin-bottom 50px
+    color #fff
+    pointer-events none
+
+    &:after
+      content ''
+      display inline-block
+      width 20px
+      height 20px
+      margin-left 35px
+      background url('../img/about/form-close.png') no-repeat center center
+      cursor pointer
+      pointer-events all
+
+  &__input,
+  &__button
+    width 285px
+    padding 14px 20px
+    margin-bottom 30px
+    border none
+    outline none
+    border-radius 30px
+    font-size 18px
+
+  &__input--textarea
+    resize none
+
+  &__button
+    width 195px
+    background #e8e8e8
+    color #cc3333
+    cursor pointer
+    font-family "GothamProMedium"
+
+    &:hover
+      color #000

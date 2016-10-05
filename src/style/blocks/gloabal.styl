@@ -3,9 +3,26 @@ body
   font-family "GothamProLight"
   font-size 16px
   height 100%
+  background #e8e8e8
 
 *
   box-sizing border-box
+
+
+::-webkit-scrollbar { width: 3px; height: 3px;}
+
+::-webkit-scrollbar-button {  background-color: red; display:none; }
+
+::-webkit-scrollbar-track {  background-color: #999;}
+
+::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+
+::-webkit-scrollbar-thumb { height: 10px; background-color: #cc3333; border-radius: 10px;}
+
+::-webkit-scrollbar-corner { background-color: #999;}
+
+::-webkit-resizer { background-color: #666;}
+
 
 .main-wrapper
   height 100%
@@ -32,58 +49,6 @@ body
 
     + .content
         margin-right 300px
-
-.main-navigation__toggle
-    position absolute
-    width 50px
-    height 50px
-    right 0
-    top 5px
-    cursor pointer
-    z-index 120
-    display none
-    cursor pointer
-
-  +below(730px)
-    width 100px
-    float none
-
-    .main-navigation__toggle
-      display block
-
-.main-navigation--closed .main-navigation__toggle::before
-  content ''
-  position absolute
-  top 10px
-  width 36px
-  height 2px
-
-  background-color #a11717
-  box-shadow 0 10px 0 0 #a11717,
-              0 20px 0 0 #a11717
-
-.main-navigation--opened
-  .main-navigation__toggle
-    top 15px
-
-    &:before,
-    &:after
-      content ''
-      position absolute
-      top 10px
-      width 36px
-      height 2px
-
-      background-color #a11717
-
-    &:before
-      transform rotate(45deg)
-      box-shadow none
-
-    &:after
-      transform rotate(-45deg)
-  .main-nav
-    width 250px
 
 .main-navigation
   +below(730px)

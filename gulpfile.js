@@ -34,7 +34,7 @@ var path = {
     },
     watch: {
         html: 'src/*.jade',
-        view: 'src/template/*.jade',
+        view: 'src/template/**/*.jade',
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.styl',
         img: 'src/img/**/*.*',

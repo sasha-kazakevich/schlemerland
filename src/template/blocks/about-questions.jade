@@ -1,0 +1,12 @@
+- var accord = [{"title":"Что я получу инвестируя в Sclemmerland?",'text':'Более подробную информацию Вы можете получить по обратной связи на сайте,  а также на сайте в разделе клиенты'},{"title":"Вы поставляете оборудование?",'text':'Более подробную информацию Вы можете получить по обратной связи на сайте,  а также на сайте в разделе клиенты'},{"title":"Как начать сотрудничать с вами?",'text':'Более подробную информацию Вы можете получить по обратной связи на сайте,  а также на сайте в разделе клиенты'}]
+
+section.about-questions.section.about
+  .about__wrapper
+    h1.about__title Вопросы/ответы
+    div#questions-button.about__button Задать вопрос
+    div.about__accord.ac-container
+      each acc,i in accord
+        +accord(acc,i)
+    +form("Задать вопрос",'questions')
+  .about__down
+    div.animation-scroll.animation-scroll--red-color

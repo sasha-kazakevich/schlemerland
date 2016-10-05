@@ -1,27 +1,6 @@
-#pagepiling
-  div.page-home.section
-    div.page-home__wrapper
-      div.page-home__logo
-        img(src="img/home/logo.png" alt="logo")
-      form.page-home__form
-        p.page-home__form-title Узнать подробнее о концепте 
-          span Schlemmerland
-        input.page-home__form-email(name="email" type="text" title="Ваш email в формате ***@**.**" placeholder="Ваш email" required pattern="^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$")
-        button.page-home__form-button(type="submit") Отправить
-      div.animation-scroll
-  div.page-home-second.section
-    div.page-home-second__wrapper
-      ul.page-home-second__qualities
-        li.page-home-second__quality.clearfix
-          div.page-home-second__images.page-home-second__images--freshness
-          p.page-home-second__text Свежесть
-        li.page-home-second__quality.clearfix
-          div.page-home-second__images.page-home-second__images--qual
-          p.page-home-second__text Качество
-        li.page-home-second__quality.clearfix
-          div.page-home-second__images.page-home-second__images--price
-          p.page-home-second__text Цена
-      button.page-home-second__learn-more
-        span.visible Клиенту
-        a.hidden(href="/clients") Получить информацию
-      div.animation-scroll
+section.main-page.animated.slideInRight
+  #pagepiling
+    section.main-p
+      include ./blocks/main-familiarization.jade
+      
+      include ./blocks/main-information.jade
