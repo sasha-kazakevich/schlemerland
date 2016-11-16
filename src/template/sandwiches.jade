@@ -1,0 +1,27 @@
+include ./blocks/mixins.jade
+
+- var ingredients = [{'image':'img/menu-p/sandwiches/s1.png','name':'Булочка с начинкой','text':'Наши рецепты сэндвичей разработаны талантливыми поварами.'}]
+
+- var product = {"src":"img/menu-p/sandwiches/card1.png","title":"С копченой форелью","text":"Самый популярный рыбный сэндвич – с форелью, однако это далеко не единственный вариант, когда речь идет о подходящих для такой закуски видах рыбы."}
+- var productTwo = {"src":"img/menu-p/sandwiches/card2.png","title":"Багет с салями","text":"Вкусный багет с колбаской салями и свежим сыром."}
+- var productThree = {"src":"img/menu-p/sandwiches/card3.png","title":"Бутерброд с рыбой","text":"Аппетитный бутерброд с красной рыбой."}
+
+section.product.animated.slideInUp
+  .product__wrapper
+    .product-header
+      h1.product__title Сэндвичи
+      p.product__text Блюдо, состоящее из двух или нескольких ломтиков хлеба (часто булки) и одного или нескольких слоёв мяса и/или других начинок.
+      h1.product__title Для приготовления необходимо
+      for ingredient in ingredients
+        +ingredient(ingredient)
+      p.product__text С помощью обородувания от наших поставщиков и наших инструкций по приготовлению Вы получите не только свежие сэндвичи, но и продукт, который нравится потребителю.
+      .product__button-wrap
+        a.product__button(href="/clients") Узнать подробнее
+    .product-price
+      h1.product__title Некоторые наши блюда
+      +product-card(product)
+      +product-card(productTwo)
+      +product-card(productThree)
+    .product-footer
+      p.product__text Наши клиенты получают полный доступ к блюдам нашего концепта
+      a.product__button(href="/contacts") Получить доступ

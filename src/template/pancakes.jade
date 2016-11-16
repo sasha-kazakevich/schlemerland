@@ -1,0 +1,25 @@
+include ./blocks/mixins.jade
+
+- var ingredients = [{'image':'img/menu-p/pancakes/p1.png','name':'Мука и другие продукты для приготовления теста','text':'Блинчики на любой вкус с разными начинками.'}]
+
+- var product = {"src":"img/menu-p/pancakes/card1.png","title":"Блинчики","text":"Блинчики предлагаются со сладкими топингами и начинками, а так же с сыром и ветчиной или просто с маслом."}
+
+
+section.product.animated.slideInUp
+  .product__wrapper
+    .product-header
+      h1.product__title Блинчики
+      p.product__text На Руси блины были ритуальным кушаньем, которое готовили в честь весеннего пришествия. За века это блюдо, символизирующее Масленицу, нисколько не утратило своей популярности - сегодня блины активно употребляют, не задумываясь ни об их ритуальном подтексте, ни о калорийности.
+    .product-main
+      h1.product__title Для приготовления блинчиков необходимо
+      for ingredient in ingredients
+        +ingredient(ingredient)
+      p.product__text С помощью обородувания от наших поставщиков и наших инструкций по приготовлению Вы получите не только вкусные блинчики, но и продукт, который нравится потребителю.
+      .product__button-wrap
+        a.product__button(href="/clients") Узнать подробнее
+    .product-price
+      h1.product__title Некоторые наши блюда
+      +product-card(product)
+    .product-footer
+      p.product__text Наши клиенты получают полный доступ к блюдам нашего концепта
+      a.product__button(href="/contacts") Получить доступ

@@ -1,0 +1,25 @@
+include ./blocks/mixins.jade
+
+- var ingredients = [{'image':'img/menu-p/dessert/d1.png','name':'Сладкое тесто','text':'Клиенты получают рецепты заготовок для приготовления в наших оборудованиях.'}]
+
+- var product = {"src":"img/menu-p/dessert/card1.png","title":"Шоколадный кекс","text":"Вкусный, но необыкновенно простой шоколадный кекс печется с добавлением в тесто темного шоколада."}
+
+
+section.product.animated.slideInUp
+  .product__wrapper
+    .product-header
+      h1.product__title Десерты
+      p.product__text Завершающее блюдо стола, предназначенное для получения приятных вкусовых ощущений в конце обеда или ужина, обычно — сладкие деликатесы
+    .product-main
+      h1.product__title Для приготовления необходимо
+      for ingredient in ingredients
+        +ingredient(ingredient)
+      p.product__text С помощью обородувания от наших поставщиков и наших инструкций по приготовлению Вы получите не только сладкие десерты, но и продукт, который нравится потребителю.
+      .product__button-wrap
+        a.product__button(href="/clients") Узнать подробнее
+    .product-price
+      h1.product__title Некоторые наши блюда
+      +product-card(product)
+    .product-footer
+      p.product__text Наши клиенты получают полный доступ к блюдам нашего концепта
+      a.product__button(href="/contacts") Получить доступ

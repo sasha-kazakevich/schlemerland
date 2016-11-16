@@ -4,9 +4,10 @@
 
 .clients-receive
   &__title
-    font-size 30px
-    font-weight 200
     margin 0
+    font-size 30px
+    font-family "GothamProMedium"
+    font-weight 300
     margin-bottom 50px
 .main-wrapper
   display flex
@@ -27,7 +28,7 @@
       width 80%
 
     &__name
-      font-size 18px
+      font-size 24px
       padding 0
       margin 0
 
@@ -78,3 +79,40 @@
 
       &:before
         background url('../img/clients/btn-h.png') no-repeat center center
+
+
++below(760px)
+  .main-wrapper
+    display block
+    .wrapper
+      display block
+      &__info
+        width 100%
+      &__image
+        width 35%
+
+    .decor
+      width 100%
+    .info-dec
+      width 100%
+
++below(500px)
+  .clients-receive
+    &__title
+      font-size 24px
+
++below(420px)
+  .clients-receive
+    &__title
+      font-size 18px
+  .clients
+    padding 25px 18px
+  .main-wrapper
+    .wrapper
+      &__name
+        font-size 18px
+      &__text
+        font-size 14px
+  .client-button
+    width 280px
+    margin 0 auto

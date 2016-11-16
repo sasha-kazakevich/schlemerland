@@ -1,0 +1,25 @@
+include ./blocks/mixins.jade
+
+- var ingredients = [{'image':'img/menu-p/soups/s1.png','name':'Бульон и ингридиенты','text':'Суп любим во всем мире, во всех кухнях. Одна испанская пословица гласит: «из супа и любви первое слово дороже второго».'}]
+
+- var product = {"src":"img/menu-p/soups/card1.png","title":"По-французски","text":"Гороховый суп-пюре является традиционным блюдом русской кухни и присутствует в кулинарных книгах почти."}
+- var productTwo = {"src":"img/menu-p/soups/card2.png","title":"Суп-лапша куриная","text":"Простая и вкусная куриная лапша из готовых макаронных изделий"}
+
+section.product.animated.slideInUp
+  .product__wrapper
+    .product-header
+      h1.product__title Супы
+      p.product__text Рецепты супов невероятно разнообразны. Горячие и холодные, легкие и очень сытные, прозрачные и густые, жидкие и супы-кремы. Существует масса разновидностей этого блюда.
+      h1.product__title Для приготовления супа необходимо
+      for ingredient in ingredients
+        +ingredient(ingredient)
+      p.product__text С помощью обородувания от наших поставщиков и наших инструкций по приготовлению Вы получите не только вкусные супы, но и продукт, который нравится потребителю.
+      .product__button-wrap
+        a.product__button(href="/clients") Узнать подробнее
+    .product-price
+      h1.product__title Некоторые наши блюда
+      +product-card(product)
+      +product-card(productTwo)
+    .product-footer
+      p.product__text Наши клиенты получают полный доступ к блюдам нашего концепта
+      a.product__button(href="/contacts") Получить доступ

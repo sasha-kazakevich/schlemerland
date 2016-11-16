@@ -9,7 +9,7 @@
 
 //= ./routes/page.js
 
-//= ./slider/jquery.cslider.js
+//= ./slider/unslider-min.js
 
 
 /*

@@ -1,0 +1,26 @@
+include ./blocks/mixins.jade
+      
+- var ingredients = [{'image':'img/menu-p/burger/b1.png','name':'Хлеб','text':'Основа каждого бургера. Не используем “готовые булочки”, а печем их сами.'},{'image':'img/menu-p/burger/b2.png','name':'Мясная котлета','text':'Будучи нашим клиентом Вы получаете поставщиков мяса. Мы знаем надежных поставщиков идеального и качественного мяса.'},{'image':'img/menu-p/burger/b3.png','name':'Овощи и другие гарниры','text':'Полный ассортимент и список свежих продуктов.'}]
+
+- var product = {"src":"img/menu-p/burger/card1.png","title":"“Классический”","text":"Сочетание бургера из хорошего мяса средней прожарки, томата, салата, вкуснейшего соуса и теплой булочки"}
+
+section.product.animated.slideInUp
+  .product__wrapper
+    .product-header
+      h1.product__title Бургеры
+      p.product__text Многие думают, что бургер - вредная еда с большой дозой жира и углеводов. Мы в Schlemmerland делаем все по правилам с домашней рубленой котлетой, хорошим зерновым хлебом, свежими овощами и наивкуснейшим соусом.
+    .product-main
+      h1.product__title Для идеального вкусного бургера необходимо
+      for ingredient in ingredients
+        +ingredient(ingredient)
+      p.product__text С помощью обородувания от наших поставщиков и наших инструкций по приготовлению Вы получите не только вкусный и сочный бургер, но и продукт, который нравится потребителю.
+      .product__button-wrap
+        a.product__button(href="/clients") Узнать подробнее
+    .product-price
+      h1.product__title Некоторые наши блюда
+      +product-card(product)
+    .product-footer
+      p.product__text Наши клиенты получают полный доступ к блюдам нашего концепта
+      a.product__button(href="/contacts") Получить доступ
+        
+            

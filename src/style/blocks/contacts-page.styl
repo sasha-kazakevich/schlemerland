@@ -8,6 +8,12 @@
   width 50%
   padding 130px 5% 130px 40px
 
+  &__secret
+    display none
+    margin 0
+    font-size 22px
+    font-weight 300
+
   &__infotext
     min-height 100px
     width 100%
@@ -102,28 +108,38 @@
       background-color #fff
       color #cc3333
 
-.contacts-page
-  +below(1007px)
+
++below(760px)
+  .contacts-page
     display block
-    .contacts-info,
-    .contacts-form
-      width 100%
-    .contacts-info
-      padding 65px
+  .contacts-info,
+  .contacts-form
+    width 100%
+  .contacts-info
+    padding 65px
+    &__icon
+      font-size 16px
 
-      &__icons
-        margin-left 30%
-  +below(575px)
-    .contacts-info
-      padding 130px 0 130px 5px
-      &__icons
-        margin-left 0
-
-.contacts-info
-  &__icon
-    +below(1055px)
-      &:before
-        margin-right 10px
-    +below(1007px)
-      &:before
-        margin-right 30px
++below(420px)
+  .contacts-info
+    padding 25px 18px
+    &__secret
+      display block
+      font-family "GothamProMedium"
+      font-size 18px
+      color #000
+      font-weight 300
+    &__icons
+      margin-left 0
+    &__infotext
+      min-height 0
+      font-size 16px
+  .contacts-form
+    &__name
+      font-family "GothamProMedium"
+      font-size 18px
+      color #000
+      font-weight 300
+    &__input,
+    &__button
+      padding 14px

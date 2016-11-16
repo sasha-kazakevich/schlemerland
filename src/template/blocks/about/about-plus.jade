@@ -1,0 +1,12 @@
+include ../mixins.jade
+
+- var pluss = [{'image':'img/about/plus/p1.png','title':'Оборудование','text':'Современное оборудование для приготовления, хранения и т.д.','id':'Page4'},{'image':'img/about/plus/p2.png','title':'Свежесть','text':'Проверенные поставщики продуктов. Регулярные поставки. Никаких замороженных продуктов. Так получается свежая вкусная еда!','id':'Page6',"class":"hidden"},{'image':'img/about/plus/p3.png','title':'Ассортимент','text':'Ассортимент подбирается технологом в связке с экономистом. Акцент делается на продажи','id':'Page3'},{'image':'img/about/plus/p4.png','title':'Цена','text':'Огромный опыт работы с питанием позволяет делать приятные цены не только для бизнеса, но и для клиентов. Маржинальность может превышать 125%.','id':'Page6',"class":"hidden"},{'image':'img/about/plus/p5.png','title':'Персонал','text':'Для персонала подготавливается специальные курсы обучения по подготовке к открытию, организации и приготовлению','id':'Page5'},{'image':'img/about/plus/p6.png','title':'Здоровая еда','text':'Еда приготовлена из свежих продуктов. В связи с поставками - никакой замороженной продукции. Так работает Sclemmerland. 79% людей возвращаюся в кафе.','id':'Page6',"class":"hidden"}]
+
+section.about.about-plus.section
+	.about__wrapper
+		h1.about__title Плюсы Schlemmerland
+		div.about-plus__wrapper
+			each plus in pluss
+				+plus(plus)
+	.about__down
+		div.animation-scroll.animation-scroll--red-color

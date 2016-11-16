@@ -1,0 +1,25 @@
+include ./blocks/mixins.jade
+
+- var ingredients = [{'image':'img/menu-p/pizza/p1.png','name':'Основа пиццы и начинка','text':'При помощи оборудования пиццы получаются сочные и вкусные.'}]
+
+- var product = {"src":"img/menu-p/pizza/card1.png","title":"Пицца “Мясное ассорти”","text":"Очень, очень много мяса – так вкратце можно описать пиццу “Мясное ассорти”"}
+
+
+section.product.animated.zoomInRight
+  .product__wrapper
+    .product-header
+      h1.product__title Пицца
+      p.product__text Итальянское национальное блюдо в виде круглой открытой лепешки, покрытой в классическом варианте томатами и расплавленным сыром. Сыр является главным ингредиентом пиццы (как правило, моцарелла). Одно из самых популярных блюд в мире.
+    .product-main
+      h1.product__title Для приготовления пиццы необходимо
+      for ingredient in ingredients
+        +ingredient(ingredient)
+      p.product__text С помощью обородувания от наших поставщиков и наших инструкций по приготовлению Вы получите не только вкусные пиццы, но и продукт, который нравится потребителю.
+      .product__button-wrap
+        a.product__button(href="/clients") Узнать подробнее
+    .product-price
+      h1.product__title Некоторые наши блюда
+      +product-card(product)
+    .product-footer
+      p.product__text Наши клиенты получают полный доступ к блюдам нашего концепта
+      a.product__button(href="/contacts") Получить доступ

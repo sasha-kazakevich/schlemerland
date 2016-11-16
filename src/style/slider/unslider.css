@@ -1,0 +1,41 @@
+.unslider{margin:0;padding:0;position:relative;}
+.unslider-wrap{position:relative}
+.unslider-wrap.unslider-carousel>li{float:left}
+.unslider-vertical>ul{height:100%}
+.unslider-vertical li{float:none;width:100%}
+.unslider-fade{position:relative}
+.unslider-fade .unslider-wrap li{position:absolute;left:0;top:0;right:0;z-index:8}
+.unslider-fade .unslider-wrap li.unslider-active{z-index:10}
+.unslider li,.unslider ol,.unslider ul{list-style:none;margin:0;padding:0;border:none}
+.unslider-arrow{
+  display:block;
+  position:absolute;
+  left:40%;
+  width: 40px;
+  height: 55px;
+  top:90%;
+  z-index:2;
+  cursor:pointer;
+  font-size: 0;
+  background:url('../img/about/slider/arr.png') no-repeat 4px 1px;
+}
+.unslider-arrow.next{
+  left:auto;
+  right:40%;
+  background-position: -35px 1px;
+}
+
+@media only screen and (max-width: 760px) {
+  .unslider-arrow {
+    width: 35px;
+    height: 53px;
+    left: 13px;
+    top: 15%;
+/*    background:url('../img/about/slider/arrows-mob.png') no-repeat 4px 1px;*/
+  }
+  .unslider-arrow.next {
+    right:10px;
+    top:15%;
+    background-position: -40px 1px;
+  }
+}

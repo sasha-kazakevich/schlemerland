@@ -1,7 +1,8 @@
 (function () {
+  // name page
+  var namePage = ['main','menu','salad','pancakes','beverages','burger','garnishes','pizza','bakery','sandwiches','dessert','steak','hotdog','soups','about','contacts','clients'];
 
   // private api
-
   var cache = {};
 
   function get (url, cb) {
@@ -20,74 +21,24 @@
   }
 
   // public api
-  // var routeArray =  [{name : 'main', url:'views/main.html'}];
-  //
-  // function createRoute(url) {
-  //     return function(ctx, next) {
-  //         get(url, function(html) {
-  //           $('#content').empty().append(html);
-  //           next();
-  //         });
-  //     }
-  // }
-  //
-  // for(var i = 0, s = routeArray.length; i< s; i++) {
-  //   window.route[routeArray[i].name] = createRoute(routeArray[i].url);
-  // }
 
-/*function addContent(cta,next,adress) {
-  get(adress,functuin(html){
-    $('#content').empty().append(html);
-    next();
-})
+  window.route = {};
 
-var adress = ['views/main.html','views/rent.html','views/service.html','views/contacts.html'];
+  function createMed(name){
+    Object.defineProperty(window.route, name, {
+        value: function(ctx,next){
+          get('template/'+name+'.html', function (html) {
+            $('#content').empty().append(html);
+            next();
+        });
+      }
+    });
+  }
 
-window.route = {
-  main: addContent(cta,next,adress[0]),
-  rent: addContent(cta,next,adress[1])
-}
+  namePage.forEach(function(el){
+    createMed(el);
+  });
 
-/*main: function(cta,next,adress) {
-  get(adress,functuin(html){
-    $('#content').empty().append(html);
-    next();
-})
-}*/
-
-  window.route = {
-    main: function (ctx, next) {
-      get('template/main.html', function (html) {
-        $('#content').empty().append(html);
-        next();
-      });
-    },
-    menu: function (ctx, next) {
-      get('template/menu.html', function (html) {
-        $('#content').empty().append(html);
-        next();
-      });
-    },
-    about: function (ctx, next) {
-      get('template/about.html', function (html) {
-        $('#content').empty().append(html);
-        next();
-      });
-    },
-    contacts: function (ctx, next) {
-      get('template/contacts.html', function (html) {
-        $('#content').empty().append(html);
-        next();
-      });
-    },
-    clients: function (ctx, next) {
-      get('template/clients.html', function (html) {
-        $('#content').empty().append(html);
-        next();
-      });
-    }
-
-  };
 
   window.done = null;
 }());

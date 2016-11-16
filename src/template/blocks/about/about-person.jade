@@ -1,0 +1,13 @@
+include ../mixins.jade
+
+-var persons = [{"image":"img/about/person/p1.png","title":"Персонал кухни","text":"Не возможно представить работников кухни без талантливого повара. Обучаемость в зависимости от ассортимента подобранного нами"},{"image":"img/about/person/p2.png","title":"Обслуживающий персонал","text":"Быстрое приготовление, подобранный ассортимент и подача даст желанный резуальтат"},{"image":"img/about/person/p3.png","title":"Руководители","text":"Обучения руководящих должностей основным принцип грамотной и бесперебойной работы кафе."}]
+
+section.about.about-person.section
+	.about__wrapper
+		h1.about__title Персонал
+		p Комплекс профессиальных тренингов для работников кафе
+		.about-person__wrapper
+			each person in persons
+				+person(person)
+	.about__down 
+		div.animation-scroll.animation-scroll--red-color

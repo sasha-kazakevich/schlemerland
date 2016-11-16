@@ -37,7 +37,7 @@ var path = {
         view: 'src/template/**/*.jade',
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.styl',
-        img: 'src/img/**/*.*',
+        // img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     clean: './build'
@@ -143,9 +143,9 @@ gulp.task('watch', function(){
     watch([path.watch.js], function(event, cb) {
         gulp.start('js:build');
     });
-    watch([path.watch.img], function(event, cb) {
-        gulp.start('image:build');
-    });
+    // watch([path.watch.img], function(event, cb) {
+    //     gulp.start('image:build');
+    // });
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
     });

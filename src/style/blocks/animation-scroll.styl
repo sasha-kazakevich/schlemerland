@@ -8,13 +8,16 @@
   &--red-color
     background url('../img/scroll/scroll-sprite-r.png') no-repeat -5px -5px
   +below(730px)
-    background url('../img/scroll/scroll-mob.png') no-repeat center center
-    animation none
-
-
+    background url('../img/scroll/scroll-mob.png') no-repeat 0 0
+    animation scroll-nob .7s steps(17) infinite
 
 @keyframes scroll
   from
     background-position -5px -5px
   to
     background-position -993px -5px
+
+@keyframes scroll-nob
+  from
+    background-position 0 0
+    background-position 0 100%

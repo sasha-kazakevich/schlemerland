@@ -37,7 +37,7 @@ body
   overflow auto
   transition margin-right .4s ease
 
-  +below(730px)
+  +below(1024px)
     margin-right 0
 
 .main-navigation
@@ -51,8 +51,11 @@ body
         margin-right 300px
 
 .main-navigation
-  +below(730px)
+  +below(1024px)
       &:hover
         width 0
         + .content
             margin-right 0
+
+#pp-nav
+  display none

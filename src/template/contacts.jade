@@ -1,5 +1,6 @@
 div.contacts-page.animated.slideInRight
   div.contacts-info
+    h1.contacts-info__secret Контакты
     p.contacts-info__infotext Если у вас есть вопросы, звоните, пишите. Мы ответим.
     div.contacts-info__icons
       p.contacts-info__icon.contacts-info__icon--email sales@schlemmerland.ru
@@ -8,7 +9,7 @@ div.contacts-page.animated.slideInRight
     h1.contacts-form__name Форма обратной связи
     form.contacts-form__form#contacts-form(method="post" action="")
         input.contacts-form__input(form="contacts-form" id="name" name="name" title="Ваше имя" type="text" placeholder="Вaше Имя"  pattern="[a-zA-Zа-яА-Я ]+")
-        input.contacts-form__input(form="contacts-form" id="email" name="email" title="email" type="email" placeholder="Введите email" pattern="^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$")
-        input.contacts-form__input(form="contacts-form" id="number" name="number" type="text" placeholder="Введите телефон" pattern="[0-9]+")
-        textarea.contacts-form__input.contacts-form__input--textarea(form="contacts-form" id="message" name="message" rows="5" title="сообщение" type="text" placeholder="Ваше сообщение")
+        input.contacts-form__input(form="contacts-form" id="email" name="email" title="email" type="email" placeholder="Электронная почта" pattern="^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$")
+        input.contacts-form__input(form="contacts-form" id="number" name="number" type="text" placeholder="Телефон" pattern="[0-9]+")
+        textarea.contacts-form__input.contacts-form__input--textarea(form="contacts-form" id="message" name="message" rows="5" title="сообщение" type="text" placeholder="Сообщение")
         button.contacts-form__button(type="submit") Отправить

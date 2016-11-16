@@ -1,0 +1,24 @@
+include ./blocks/mixins.jade
+
+- var ingredients = [{'image':'img/menu-p/bakery/b1.png','name':'Тесто для выпечки','text':'При помощи оборудования хлеб выпекается свежим, вкусным и хрустящим.'}]
+
+- var product = {"src":"img/menu-p/bakery/card1.png","title":"Немецкий хлеб с булочкой","text":"Горячий мясной ломтик с теплой булочкой. Можно взять с собой."}
+
+
+section.product.animated.slideInUp
+  .product__wrapper
+    .product-header
+      h1.product__title Хлеб, булочки
+      p.product__text Большинство людей не могут представить свой завтрак, обед или ужин, без такого продукта питания как хлеб. Он стал неотъемлемой частью нашего повседневного рациона. В давние времена хлеб воспевали, о нем слагали легенды. 
+      h1.product__title Для приготовления хлеба необходимо
+      for ingredient in ingredients
+        +ingredient(ingredient)
+      p.product__text С помощью обородувания от наших поставщиков и наших инструкций по приготовлению Вы получите не только свежий хлеб, но и продукт, который нравится потребителю.
+      .product__button-wrap
+        a.product__button(href="/clients") Узнать подробнее
+    .product-price
+      h1.product__title Некоторые наши блюда
+      +product-card(product)
+    .product-footer
+      p.product__text Наши клиенты получают полный доступ к блюдам нашего концепта
+      a.product__button(href="/contacts") Получить доступ

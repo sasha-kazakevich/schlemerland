@@ -1,0 +1,29 @@
+include ./blocks/mixins.jade
+
+- var ingredients = [{'image':'img/menu-p/steak/s1.png','name':'Мясо','text':'Мы знаем самых лучших поставщиков мяса. Наши поставщики соблюдают сроки и качество поставки, продукта и сервиса.'}]
+
+- var product = {"src":"img/menu-p/steak/card1.png","title":"Немецкая колбаса","text":"Приготовлены по старинным немецким рецептам, из охлажденного мяса."}
+- var productTwo = {"src":"img/menu-p/steak/card2.png","title":"Карбонат запеченный с помидором и сыром","text":"Подкопченое мясо с запечеными помидором и сыром"}
+- var productThree = {"src":"img/menu-p/steak/card3.png","title":"Шашлык из свинины","text":"Нет ничего первобытнее, чем разделать мясо на маленькие куски, насадить на палочку и поджарить на огне."}
+- var productThrow = {"src":"img/menu-p/steak/card4.png","title":"Шницель в панировке","text":"Правильно приготовленный шницель имеет золотисто-оранжевый цвет и хрустящую корочку."}
+
+section.product.animated.slideInUp
+  .product__wrapper
+    .product-header
+      h1.product__title Мясное
+      p.product__text Мясо можно приготовить различными способами. Его можно варить, жарить, запекать, тушить и так далее. Рецептов приготовления мяса очень много, поэтому с этим продуктом можно смело проявлять свои способности и фантазию.
+      h1.product__title Для приготовления мясо необходимо
+      for ingredient in ingredients
+        +ingredient(ingredient)
+      p.product__text С помощью обородувания от наших поставщиков и наших инструкций по приготовлению Вы получите не только вкусное мясо, но и продукт, который нравится потребителю.
+      .product__button-wrap
+        a.product__button(href="/clients") Узнать подробнее
+    .product-price
+      h1.product__title Некоторые наши блюда
+      +product-card(product)
+      +product-card(productTwo)
+      +product-card(productThree)
+      +product-card(productThrow)
+    .product-footer
+      p.product__text Наши клиенты получают полный доступ к блюдам нашего концепта
+      a.product__button(href="/contacts") Получить доступ

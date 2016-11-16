@@ -1,0 +1,186 @@
+.menu-page
+  width 100%
+  // background url('../img/menu-p/pat.svg')
+
+  &__wrapper
+    padding 50px
+    background url('../img/menu-p/pat.png')
+
+  &__title
+    margin 0
+    font-size 30px
+    font-family "GothamProMedium"
+    font-weight 300
+    margin-bottom 50px
+
+.menu
+  width 100%
+  margin 0 auto
+  background #fff
+  overflow hidden
+  position relative
+
+  &__row
+    display flex
+    justify-content space-between
+
+  &__block
+    width 33.3%
+    position relative
+    &:before
+      content ''
+      display block
+      padding-top 100%
+
+  &__element
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    text-decaraton none
+    background #fff
+
+
+    &:hover
+      p
+        opacity 0
+        display none
+
+  p
+    position absolute
+    bottom 0
+    left 0
+    right 0
+    font-size 18px
+    text-align center
+    color #000
+
+    // transition opacity .1s ease-in-out .2s
+
+  &__animation
+    animation sprite .2s steps(10)
+    animation-fill-mode both
+
+  &__remove
+    animation: removesprite 0.2s steps(10)
+    animation-fill-mode both
+
+  &__element--salad
+    background #fff url('../img/menu-p/salad/animation.png') 0% 0% no-repeat
+    background-size 100%
+
+  &__element--pancakes
+    background #fff url('../img/menu-p/pancakes/animation.png') 0% 0% no-repeat
+    background-size 100%
+
+  &__element--beverages
+    background #fff url('../img/menu-p/beverages/animation.png') 0% 0% no-repeat
+    background-size 100%
+
+  &__element--burger
+    background #fff url('../img/menu-p/burger/animation.png') 0% 0% no-repeat
+    background-size 100%
+
+  &__element--garnishes
+    background #fff url('../img/menu-p/garnishes/animation.png') 0% 0% no-repeat
+    background-size 100%
+
+  &__element--pizza
+    background #fff url('../img/menu-p/pizza/animation.png') 0% 0% no-repeat
+    background-size 100%
+
+  &__element--bakery
+    background #fff url('../img/menu-p/bakery/animation.png') 0% 0% no-repeat
+    background-size 100%
+
+  &__element--sandwiches
+    background #fff url('../img/menu-p/sandwiches/animation.png') 0% 0% no-repeat
+    background-size 100%
+
+  &__element--dessert
+    background #fff url('../img/menu-p/dessert/animation.png') 0% 0% no-repeat
+    background-size 100%
+
+  &__element--steak
+    background #fff url('../img/menu-p/steak/animation.png') 0% 0% no-repeat
+    background-size 100%
+
+  &__element--hotdog
+    background #fff url('../img/menu-p/hotdog/animation.png') 0% 0% no-repeat
+    background-size 100%
+
+  &__element--soups
+    background #fff url('../img/menu-p/soups/animation.png') 0% 0% no-repeat
+    background-size 100%
+
+.menu-more
+  text-align center
+  &__stars
+    font-size 18px
+    &:before
+      display inline-block
+      position relative
+      top 10px
+      content ''
+      width 30px
+      height 30px
+      margin-right 40px
+      background  url('../img/menu-p/stars.png') center center no-repeat
+  &__title
+    font-size 24px
+  &__button
+    display inline-block
+    position relative
+    width 320px
+    padding 16px 20px
+    border-radius 30px
+    font-size 18px
+    background #cc3333
+    color #fff
+    cursor pointer
+    font-family "GothamProMedium"
+    text-align center
+    text-decoration none
+    transition all .2s ease-in-out
+
+    &:hover
+      background #fff
+      color #cc3333
+
+@keyframes sprite
+  from
+    background-position 0 0
+  to
+    background-position 0 100%
+
+@keyframes removesprite
+  from
+    background-position 0 100%
+  to
+    background-position 0 0
+
+
++below(760px)
+  .menu__row
+    display block
+  .menu__block
+    width 50%
+    margin 0 auto
+  .menu-more__title
+    font-size 20px
++below(600px)
+  .menu__block
+    width 80%
+  .menu-more__title
+    font-size 18px
+  .menu-more__button
+    width 280px
++below(420px)
+  .menu-page__wrapper
+    padding 25px 18px
+  .menu-page__title
+    margin-bottom 30px
+    font-size 18px
+  .menu__block
+    width 100%

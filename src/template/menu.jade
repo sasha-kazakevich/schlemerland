@@ -1,2 +1,31 @@
-section.menu.animated.slideInRight
-  p Страница в разработке!
+mixin product(product)
+  .menu__block
+    a(href= "./" + product.name class= "menu__element--" + product.name).menu__element
+      p= product.text
+
+- var firstRow = [{"name":"salad","text":"Салаты"},{"name":"pancakes","text":"Блинчики"},{"name":"beverages","text":"Напитки"}]
+- var secondRow = [{"name":"burger","text":"Бургеры"},{"name":"garnishes","text":"Гарниры"},{"name":"pizza","text":"Пицца"}]
+- var thirdRow = [{"name":"bakery","text":"Хлеб, булочки"},{"name":"sandwiches","text":"Сэндвичи"},{"name":"dessert","text":"Десерты"}]
+- var fourthRow = [{"name":"steak","text":"Мясное"},{"name":"hotdog","text":"Хот-доги"},{"name":"soups","text":"Супы"}]
+
+section.menu-page.animated.slideInRight
+  .menu-page__wrapper
+    h1.menu-page__title Меню
+    section.menu
+      .menu__row
+        each product in firstRow
+          +product(product)
+      .menu__row
+        each product in secondRow
+          +product(product)
+      .menu__row
+        each product in thirdRow
+          +product(product)
+      .menu__row
+        each product in fourthRow
+          +product(product)
+    section.menu-more
+      p.menu-more__stars Наши клиенты получают список продуктов, рецептов, поставщиков и блюд (больше 250 наименований)
+      p.menu-more__title Узнайте более подробно о наших рецептах
+      a.menu-more__button(href="/clients") Узнать подробнее
+  

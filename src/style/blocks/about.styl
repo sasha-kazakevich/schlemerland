@@ -12,10 +12,14 @@
     min-height 100%
     padding 45px 50px
     overflow hidden
+    
+    &--nopadding
+      padding-bottom 0
 
   &__title
     margin 0
     font-size 30px
+    font-family "GothamProMedium"
     font-weight 300
 
   &__button
@@ -37,11 +41,26 @@
       color #fff
       background #cc3333
 
-  &__accord,
   &__slider
     clear both
 
   &__down
+    margin auto
+    left 0
+    right 0
+    bottom 0
     height 100px
-    margin-top -100px
-    position relative
+    position absolute
+    z-index 0
+
++below(730px)
+  .about
+    &__title
+      font-size 18px
+    &__button
+      display none
+
++below(420px)
+  .about
+    &__wrapper
+      padding 20px

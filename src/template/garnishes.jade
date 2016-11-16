@@ -1,0 +1,28 @@
+include ./blocks/mixins.jade
+      
+- var ingredients = [{'image':'img/menu-p/garnishes/g1.png','name':'Овощи, крупы и другое','text':'Овощной гарнир, картофель фри, бобовые культуры, отварные овощи, злаковые культуры, грибы'}]
+
+- var product = {"src":"img/menu-p/garnishes/card1.png","title":"Карривурст с картофелем фри","text":"Блюдо №1 по популярности в Германии. Резаные жареные колбаски, с картофелем фри и наивкуснейшим соусом “Карри”"}
+- var productTwo = {"src":"img/menu-p/garnishes/card2.png","title":"Спагетти с соусом Болоньезе","text":"Традиционное блюдо итальянской кухни, очень популярное в России и у нас"}
+- var productThree = {"src":"img/menu-p/garnishes/card3.png","title":"Овощи гриль","text":"К котлетам, шницелю, фрикаделькам, колбаскам хорошо подойдут овощи гриль с соусом Бальзамик"}
+
+section.product.animated.slideInUp
+  .product__wrapper
+    .product-header
+      h1.product__title Гарниры
+      p.product__text Стоит тщательно подходить к ингредиентам для гарнира, а также к процессу приготовления блюда. Для каждого вида основных блюд подходит тот или иной гарнир. Лучше заранее продумать гарнир к основному блюдо, чтобы не испортить обще впечатление от кулинарного изделия.
+    .product-main
+      h1.product__title Для приготовления гарниров необходимо
+      for ingredient in ingredients
+        +ingredient(ingredient)
+      p.product__text С помощью обородувания от наших поставщиков и наших инструкций по приготовлению Вы получите не только вкусный гарниры, но и продукт, который нравится потребителю.
+      .product__button-wrap
+        a.product__button(href="/clients") Узнать подробнее
+    .product-price
+      h1.product__title Некоторые наши блюда
+      +product-card(product)
+      +product-card(productTwo)
+      +product-card(productThree)
+    .product-footer
+      p.product__text Наши клиенты получают полный доступ к блюдам нашего концепта
+      a.product__button(href="/contacts") Получить доступ

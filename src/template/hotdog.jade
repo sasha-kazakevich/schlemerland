@@ -1,0 +1,25 @@
+include ./blocks/mixins.jade
+
+- var ingredients = [{'image':'img/menu-p/hotdog/h1.png','name':'Булочка, сосиска с разными начинками','text':'Мы приготавливаем идеальный хот-дог с ароматной свежей булочкой и хрустящими снаружи и сочными внутри сосисками.'}]
+
+- var product = {"src":"img/menu-p/hotdog/card1.png","title":"По-французски","text":"Булочка с сосиской, кетчупом и горчицей успела завоевать желудки многих и покорить сердца сотен тысяч людей"}
+- var productTwo = {"src":"img/menu-p/hotdog/card2.png","title":"По-ньюйорски","text":"Включает в себя ломтики свежих помидоров, мелко нарубленный лук, острые маринованные перцы, маринованный огурец, горчицу"}
+
+section.product.animated.slideInUp
+  .product__wrapper
+    .product-header
+      h1.product__title Хот-доги
+      p.product__text Булка с сосиской или колбаской, приправленной кетчупом либо горчицей и иногда овощами (свежими, маринованными или жареными), зеленью, сыром или беконом. Хот-дог едят руками, на весу. Существует масса разновидностей этого блюда.
+      h1.product__title Для приготовления хот-дога необходимо
+      for ingredient in ingredients
+        +ingredient(ingredient)
+      p.product__text С помощью обородувания от наших поставщиков и наших инструкций по приготовлению Вы получите не только вкусный хот-дог, но и продукт, который нравится потребителю.
+      .product__button-wrap
+        a.product__button(href="/clients") Узнать подробнее
+    .product-price
+      h1.product__title Некоторые наши блюда
+      +product-card(product)
+      +product-card(productTwo)
+    .product-footer
+      p.product__text Наши клиенты получают полный доступ к блюдам нашего концепта
+      a.product__button(href="/contacts") Получить доступ

@@ -1,0 +1,31 @@
+.about-slider
+  clear both
+  position relative
+  &__slide
+    display flex
+  &__image
+    margin-right 45px
+    img
+      width 270px
+  &__text
+    p
+      font-size 18px
+    h2
+      font-size 24px
+      font-weight 300
+
+.about-slider
+  margin-top 35px
+  +below(760px)
+    .about-slider__slide
+      display block
+    .about-slider__image
+      margin-right 0
+      text-align center
+      img
+        width 140px
+    .about-slider__text
+      p
+        font-size 12px
+      h2
+        text-align center

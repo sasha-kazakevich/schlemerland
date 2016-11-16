@@ -1,15 +1,18 @@
-mixin list(list)
-  li.main-nav__item(class= "main-nav__item--" + list.page)
-    a(href= "/" + list.page)= list.text
-
-- var lists = [{'page':'','text':'Главная'},{'page':'menu','text':'Меню'},{'page':'about','text':'О.нас'},{'page':'clients','text':'Клиенту'},{'page':'contacts','text':'Контакты'}]
 
 div#button-burg.main-navigation__toggle
 nav.main-nav
   div.main-nav__wrapper
     section.main-nav__top
-    ul.main-nav__list
-      each list in lists
-        +list(list)
+    ul.main-nav__list#menu
+      li.main-nav__item
+        a(href="/") Главная
+      li.main-nav__item.main-nav__item--menu
+        a(href="/menu") Меню
+      li.main-nav__item.main-nav__item--about
+        a(href="/about") О&nbsp;нас
+      li.main-nav__item.main-nav__item--clients
+        a(href="/clients") Клиенту
+      li.main-nav__item.main-nav__item--contacts
+        a(href="/contacts") Контакты
     section.main-nav__bottom
       a.main-nav__social.main-nav__social--fb(href="http://facebook.com") Мы&nbsp;в&nbsp;Facebook

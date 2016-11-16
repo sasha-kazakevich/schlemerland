@@ -1,0 +1,55 @@
+.about-plus
+	overflow hidden
+	height 100%
+	&__wrapper
+		display flex
+		padding 45px 25px
+		justify-content space-between
+		flex-wrap wrap
+
+.plus
+	width 40%
+	min-height 150px
+	&__image
+		float left
+	&__info
+		margin-left 130px
+	&__title
+		margin 0
+		font-size 18px
+		font-family "GothamProMedium"
+		font-weight 300
+	&__text
+		font-size 12px
+		margin 0
+		padding-top 15px
+		min-height 80px
+	&__link
+		display block
+		font-family "GothamProMedium"
+		font-size 14px
+		float right
+		color #cc3333
+		text-decoration none
+		cursor pointer
+		padding-right 10px
+		
++below(1230px)
+	.plus
+		width 48%
++below(1024px)
+	.about-plus
+		display none
+// 	.plus
+// 		&__text
+// 			min-height 100px
+// +below(730px)
+// 	.about-plus
+// 		&__wrapper
+// 			display block
+// 	.hidden
+// 		display none
+// 	.plus
+// 		width 100%
+// 		&__title
+// 			font-size 16px

@@ -1,0 +1,64 @@
+mixin ingredient(ingredient)
+  section.ingredient
+    img.ingredient__image(src= ingredient.image)
+    div.ingredient__info
+      h2.ingredient__name= ingredient.name
+      p.ingredient__text= ingredient.text
+      
+mixin product-card(product)
+  .product-card
+    img.product-card__picture(src= product.src alt="pic")
+    .product-card__info-block
+      .product-card__wraper
+        h1.product-card__title= product.title
+        p.product-card__text= product.text
+        table.product-table
+          tr.product-table__row
+            td.product-table__table-title Себестоимость <br/> 
+              span Используя наш бизнес план
+            td.product-table__table-price 1000 руб
+          tr.product-table__row
+            td.product-table__table-title Время приготовления <br/> 
+              span Используя наше оборудования
+            td.product-table__table-price ≈ 98 сек
+          tr.product-table__row
+            td.product-table__table-title Цена продажи
+            td.product-table__table-price 2000 руб <br/> 
+              span Маржиональность - 100%
+
+//- about-page
+mixin slider(slider)
+  li.about-slider__slide
+    .about-slider__image
+      img(src= slider.img alt="img")
+    .about-slider__text
+      p= slider.text
+      h2= slider.name
+
+mixin form(arg,id)
+  form.about-form(id= id + '-form')
+    h1.form-title(id= id + '-title').about-form__title= arg
+    input.about-form__input(form="about-form" id="name" name="name" title="Ваше имя" type="text" placeholder="Вaше имя"  pattern="[a-zA-Zа-яА-Я ]+")
+    input.about-form__input(form="about-form" id="email" name="email" title="email" type="email" placeholder="Ваш email" pattern="^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$")
+    textarea.about-form__input.about-form__input--textarea(form="about-form" id="message" name="message" rows="10" title="сообщение" type="text" placeholder="Текст...")
+    button.about-form__button(type="submit") Отправить
+
+mixin plus(plus)
+  section.plus(class= plus.class)
+    img.plus__image(src= plus.image)
+    div.plus__info
+      h2.plus__title= plus.title
+      p.plus__text= plus.text
+      a.plus__link(data= plus.id) Подробнее
+
+mixin equip(equip)
+  section.equip
+    img.equip__image(src= equip.image)
+    h2.equip__title= equip.title
+    p.equip__text= equip.text
+
+mixin person(person)
+  section.person
+    img.person__image(src= person.image)
+    h2.person__title= person.title
+    p.person__text= person.text
